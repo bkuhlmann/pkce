@@ -2,6 +2,7 @@
 
 require "pkce/challenger"
 require "pkce/verifier"
+require "pkce/code"
 
 # Main namespace.
 module PKCE
