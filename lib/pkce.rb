@@ -7,4 +7,5 @@ require "pkce/encoder"
 
 # Main namespace.
 module PKCE
+  def self.call(...) = Encoder.new.call(...)
 end
