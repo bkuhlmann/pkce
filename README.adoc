@@ -6,10 +6,12 @@
 
 = Proof Key for Code Exchange (PKCE)
 
-PKCE ({rfc_link}) is an authorization code flow extension to link:https://oauth.net[OAuth] which is necessary for mobile authentication but works well for web flows because the added security is transparent to the end user. Specifically, PKCE prevents the following types of attacks:
+Proof Key for Code Exchange (PKCE) is an authorization code flow extension to link:https://oauth.net[OAuth] which is necessary for mobile authentication but works well for web flows because the added security is transparent to the user. Specifically, PKCE prevents the following types of attacks:
 
 * Authorization code interception
 * Authorization code injection
+
+This gem is an implementation of the {rfc_link} specification so you can leverage PKCE in your own code.
 
 toc::[]
 
