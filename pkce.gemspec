@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.authors = ["Brooke Kuhlmann"]
   spec.email = ["brooke@alchemists.io"]
   spec.homepage = "https://www.alchemists.io/projects/pkce"
-  spec.summary = "Encodes Proof Key for Code Exchange (PKCE) for OAuth."
+  spec.summary = "Builds Proof Key for Code Exchange (PKCE) challenge and verify codes for OAuth."
   spec.license = "Hippocratic-2.1"
 
   spec.metadata = {
@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
     "changelog_uri" => "https://www.alchemists.io/projects/pkce/versions",
     "documentation_uri" => "https://www.alchemists.io/projects/pkce",
     "funding_uri" => "https://github.com/sponsors/bkuhlmann",
-    "label" => "Pkce",
+    "label" => "PKCE",
     "rubygems_mfa_required" => "true",
     "source_code_uri" => "https://github.com/bkuhlmann/pkce"
   }
