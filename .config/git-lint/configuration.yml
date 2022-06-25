@@ -1,0 +1,3 @@
+:analyzers:
+  :commit_body_line_length:
+    :enabled: false
