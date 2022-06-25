@@ -1,18 +1,29 @@
+:rfc_link: link:https://datatracker.ietf.org/doc/html/rfc7636[RFC 7636]
+
 :toc: macro
 :toclevels: 5
 :figure-caption!:
 
-= PKCE
+= Proof Key for Code Exchange (PKCE)
+
+PKCE ({rfc_link}) is an authorization code flow extension to link:https://oauth.net[OAuth] which is necessary for mobile authentication but works well for web flows because the added security is transparent to the end user. Specifically, PKCE prevents the following types of attacks:
+
+* Authorization code interception
+* Authorization code injection
 
 toc::[]
 
 == Features
 
-== Screencasts
+- Implements the {rfc_link} specification.
+- Provides a simple object API for obtaining a challenge and verify code.
+- Provides max length security by default.
+- Answers a monad result.
 
 == Requirements
 
 . link:https://www.ruby-lang.org[Ruby].
+. link:https://www.oauth.com[OAuth].
 
 == Setup
 
@@ -24,6 +35,57 @@ bin/setup
 ----
 
 == Usage
+
+The object API is simple to work with as you only need to interact with the `PKCE` constant. Example:
+
+[source,ruby]
+----
+code = PKCE.call.success
+code.challenge  # e2tGChTfGON-C55i0yu13-urIgDFuMCmo73F7TZmoiw
+code.verify     # hYnx2WTJo7Bgu1-GqPUIYtRkb2W7pRBawkmdDi3omPdramb27Fp4rps_w6ozns-gbVCKFC2-Kno4P_b1H3FuxnlYIOd9Bo5yoTXq_xEHDJaB_fOfn2NaiCtcWQ8Bs91I
+----
+
+You can also pass in a custom length (default is maximum):
+
+[source,ruby]
+----
+code = PKCE.call(length: 35).success
+code.challenge  # R1b1Ka3jmrLKvQ7xW5QmP5MsCSEWtdoA2lo3r-SZDfg
+code.verify     # ucKkqwoMzc9cyPcSGMbuVf3ivr4sep2mq15hGN9sVzl4X7g
+----
+
+In case of a failure, you'll get a proper error message:
+
+[source,ruby]
+----
+PKCE.call(length: 100).failure  # Invalid PKCE verifier length: 100. Must be between 32..96.
+----
+
+Due to the fact that PKCE answers back a link:https://dry-rb.org/gems/dry-monads[monad], you have all of the power of link:https://www.alchemists.io/talks/ruby_pattern_matching[pattern matching] at your fingertips as well:
+
+[source,ruby]
+----
+include Dry::Monads[:result]
+
+case PKCE.call
+  in Success(code) then puts code.inspect
+  in Failure(message) then puts message
+end
+----
+
+Finally, since the code answered back is a link:https://www.alchemists.io/articles/ruby_structs[Struct], you have a value object -- which is frozen -- that you can easily test and interact with:
+
+[source,ruby]
+----
+PKCE.call.success
+# #<struct PKCE::Code challenge="dTiwjdltI-SBR1wHTEWa8zQs2kegLoIxJb2fb8emno0", verify="p4uH9lxdDMLmYLaLtYV0QJMi-o0FTQT29CJWYcdRsK0xJVsaFiQ981W5nSWDsWJgA-LS5hwKHEPcOAmVgOELNpolPhi3tcelBX9Y-z_hHUOq24DAAZOe0DU6VBb6zHCZ">
+----
+
+== Architecture
+
+The following documents the workflow used to process and build authorization codes.
+
+image::https://www.alchemists.io/images/projects/pkce/doc/sequence_diagram.svg[Sequence Diagram]
 
 == Development
 
