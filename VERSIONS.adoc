@@ -2,4 +2,15 @@
 
 == 0.0.0 (2022-06-25)
 
-* Added initial implementation.
+* Added challenger
+* Added code struct
+* Added documentation
+* Added Dry Monads gem
+* Added encoder
+* Added gemspec summary
+* Added Git Lint configuration
+* Added module class convenience method
+* Added project skeleton
+* Added RSpec patterns shared context
+* Added verifier
+* Refactored Refinements gem to test group
