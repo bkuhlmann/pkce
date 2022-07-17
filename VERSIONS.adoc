@@ -1,5 +1,14 @@
 = Versions
 
+== 0.1.0 (2022-07-17)
+
+* Fixed 0.0.0 version details - Brooke Kuhlmann
+* Fixed gemspec label and summary - Brooke Kuhlmann
+* Updated README inroduction - Brooke Kuhlmann
+* Updated to Caliber 0.11.0 - Brooke Kuhlmann
+* Updated to Debug 1.6.0 - Brooke Kuhlmann
+* Updated to Refinements 9.6.0 - Brooke Kuhlmann
+
 == 0.0.0 (2022-06-25)
 
 * Added challenger
