@@ -83,13 +83,16 @@ PKCE.call.success
 # #<struct PKCE::Code challenge="dTiwjdltI-SBR1wHTEWa8zQs2kegLoIxJb2fb8emno0", verify="p4uH9lxdDMLmYLaLtYV0QJMi-o0FTQT29CJWYcdRsK0xJVsaFiQ981W5nSWDsWJgA-LS5hwKHEPcOAmVgOELNpolPhi3tcelBX9Y-z_hHUOq24DAAZOe0DU6VBb6zHCZ">
 ----
 
-== Architecture
-
-The following documents the workflow used to process and build authorization codes.
-
-image::https://www.alchemists.io/images/projects/pkce/doc/sequence_diagram.svg[Sequence Diagram]
-
 == Development
+
+To contribute, run:
+
+[source,bash]
+----
+git clone https://github.com/bkuhlmann/pkce
+cd pkce
+bin/setup
+----
 
 You can also use the IRB console for direct access to all objects:
 
@@ -97,6 +100,12 @@ You can also use the IRB console for direct access to all objects:
 ----
 bin/console
 ----
+
+=== Architecture
+
+The following documents the workflow used to process and build authorization codes.
+
+image::https://www.alchemists.io/images/projects/pkce/doc/sequence_diagram.svg[Sequence Diagram]
 
 == Tests
 
