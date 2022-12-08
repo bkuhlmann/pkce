@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require "securerandom"
 require "dry/monads"
+require "securerandom"
 
 module PKCE
   # Handles Proof Key for Code Exchange (PKCE) verification.

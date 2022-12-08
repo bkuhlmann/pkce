@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require "spec_helper"
 require "securerandom"
+require "spec_helper"
 
 RSpec.describe PKCE::Challenger do
   subject(:challenger) { described_class.new }
