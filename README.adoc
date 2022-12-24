@@ -75,12 +75,12 @@ case PKCE.call
 end
 ----
 
-Finally, since the code answered back is a link:https://www.alchemists.io/articles/ruby_structs[Struct], you have a value object -- which is frozen -- that you can easily test and interact with:
+Finally, since the code answered back is a link:https://www.alchemists.io/articles/ruby_data[Data] object that you can easily test and interact with:
 
 [source,ruby]
 ----
 PKCE.call.success
-# #<struct PKCE::Code challenge="dTiwjdltI-SBR1wHTEWa8zQs2kegLoIxJb2fb8emno0", verify="p4uH9lxdDMLmYLaLtYV0QJMi-o0FTQT29CJWYcdRsK0xJVsaFiQ981W5nSWDsWJgA-LS5hwKHEPcOAmVgOELNpolPhi3tcelBX9Y-z_hHUOq24DAAZOe0DU6VBb6zHCZ">
+#<data PKCE::Code challenge="ROMnfvHt04xhM80WB2PyPK67GGrG35UdFEf0DEBkes0", verify="cUq917cDIROAUkew-OjIdfIz1OYyv-ERt9NnSdzlxz4XSYzdbRycVuRDD2SBIDBiKnXUamxvpxNRsUMBQ1PvBdtziGs_oYe98MDWmM8J2_NJQBVg2kP-B2OqBdMp00qh">
 ----
 
 == Development
