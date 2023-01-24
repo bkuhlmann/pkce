@@ -15,6 +15,6 @@ module PKCE
 
     private
 
-    attr_reader :code, :verifier, :challenger, :logger
+    attr_reader :code, :verifier, :challenger
   end
 end
