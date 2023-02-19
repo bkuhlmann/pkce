@@ -63,7 +63,7 @@ In case of a failure, you'll get a proper error message:
 PKCE.call(length: 100).failure  # Invalid PKCE verifier length: 100. Must be between 32..96.
 ----
 
-Due to the fact that PKCE answers back a link:https://dry-rb.org/gems/dry-monads[monad], you have all of the power of link:https://www.alchemists.io/talks/ruby_pattern_matching[pattern matching] at your fingertips as well:
+Due to the fact that PKCE answers back a link:https://dry-rb.org/gems/dry-monads[monad], you have all of the power of link:https://alchemists.io/talks/ruby_pattern_matching[pattern matching] at your fingertips as well:
 
 [source,ruby]
 ----
@@ -75,7 +75,7 @@ case PKCE.call
 end
 ----
 
-Finally, since the code answered back is a link:https://www.alchemists.io/articles/ruby_data[Data] object that you can easily test and interact with:
+Finally, since the code answered back is a link:https://alchemists.io/articles/ruby_data[Data] object that you can easily test and interact with:
 
 [source,ruby]
 ----
@@ -105,7 +105,7 @@ bin/console
 
 The following documents the workflow used to process and build authorization codes.
 
-image::https://www.alchemists.io/images/projects/pkce/doc/sequence_diagram.svg[Sequence Diagram]
+image::https://alchemists.io/images/projects/pkce/doc/sequence_diagram.svg[Sequence Diagram]
 
 == Tests
 
@@ -116,19 +116,19 @@ To test, run:
 bin/rake
 ----
 
-== link:https://www.alchemists.io/policies/license[License]
+== link:https://alchemists.io/policies/license[License]
 
-== link:https://www.alchemists.io/policies/security[Security]
+== link:https://alchemists.io/policies/security[Security]
 
-== link:https://www.alchemists.io/policies/code_of_conduct[Code of Conduct]
+== link:https://alchemists.io/policies/code_of_conduct[Code of Conduct]
 
-== link:https://www.alchemists.io/policies/contributions[Contributions]
+== link:https://alchemists.io/policies/contributions[Contributions]
 
-== link:https://www.alchemists.io/projects/pkce/versions[Versions]
+== link:https://alchemists.io/projects/pkce/versions[Versions]
 
-== link:https://www.alchemists.io/community[Community]
+== link:https://alchemists.io/community[Community]
 
 == Credits
 
-* Built with link:https://www.alchemists.io/projects/gemsmith[Gemsmith].
-* Engineered by link:https://www.alchemists.io/team/brooke_kuhlmann[Brooke Kuhlmann].
+* Built with link:https://alchemists.io/projects/gemsmith[Gemsmith].
+* Engineered by link:https://alchemists.io/team/brooke_kuhlmann[Brooke Kuhlmann].
