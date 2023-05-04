@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |spec|
   spec.name = "pkce"
-  spec.version = "1.0.3"
+  spec.version = "1.0.4"
   spec.authors = ["Brooke Kuhlmann"]
   spec.email = ["brooke@alchemists.io"]
   spec.homepage = "https://alchemists.io/projects/pkce"
-  spec.summary = "Builds Proof Key for Code Exchange (PKCE) challenge and verify codes for OAuth."
+  spec.summary = "An OAuth Proof Key for Code Exchange (PKCE) challenge and code verifier."
   spec.license = "Hippocratic-2.1"
 
   spec.metadata = {
