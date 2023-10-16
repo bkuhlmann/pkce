@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name = "pkce"
-  spec.version = "1.0.4"
+  spec.version = "1.0.5"
   spec.authors = ["Brooke Kuhlmann"]
   spec.email = ["brooke@alchemists.io"]
   spec.homepage = "https://alchemists.io/projects/pkce"
