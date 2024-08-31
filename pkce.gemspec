@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.metadata = {
     "bug_tracker_uri" => "https://github.com/bkuhlmann/pkce/issues",
     "changelog_uri" => "https://alchemists.io/projects/pkce/versions",
-    "documentation_uri" => "https://alchemists.io/projects/pkce",
+    "homepage_uri" => "https://alchemists.io/projects/pkce",
     "funding_uri" => "https://github.com/sponsors/bkuhlmann",
     "label" => "PKCE",
     "rubygems_mfa_required" => "true",
