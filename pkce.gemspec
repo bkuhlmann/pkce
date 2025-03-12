@@ -24,7 +24,7 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version = "~> 3.4"
   spec.add_dependency "base64", "~> 0.1"
-  spec.add_dependency "dry-monads", "~> 1.6"
+  spec.add_dependency "dry-monads", "~> 1.8"
 
   spec.extra_rdoc_files = Dir["README*", "LICENSE*"]
   spec.files = Dir["*.gemspec", "lib/**/*"]
