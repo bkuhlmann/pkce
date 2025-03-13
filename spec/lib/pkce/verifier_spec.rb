@@ -17,13 +17,13 @@ RSpec.describe PKCE::Verifier do
     end
 
     it "answers error with small length" do
-      expect(verifier.call(length: 31).failure).to eq(
+      expect(verifier.call(length: 31)).to be_failure(
         "Invalid PKCE verifier length: 31. Must be between 32..96."
       )
     end
 
     it "answers error with large length" do
-      expect(verifier.call(length: 97).failure).to eq(
+      expect(verifier.call(length: 97)).to be_failure(
         "Invalid PKCE verifier length: 97. Must be between 32..96."
       )
     end
