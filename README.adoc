@@ -6,6 +6,8 @@
 
 = Proof Key for Code Exchange (PKCE)
 
+‼️ *This gem is deprecated and will be fully destroyed on 2026-01-15. There is no replacement. Please update accordingly.* ‼️
+
 Proof Key for Code Exchange (PKCE) is an authorization code flow extension to link:https://oauth.net[OAuth] which is necessary for mobile authentication but works well for web flows because the added security is transparent to the user. Specifically, PKCE prevents the following types of attacks:
 
 * Authorization code interception

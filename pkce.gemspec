@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name = "pkce"
-  spec.version = "3.2.0"
+  spec.version = "3.2.1"
   spec.authors = ["Brooke Kuhlmann"]
   spec.email = ["brooke@alchemists.io"]
   spec.homepage = "https://alchemists.io/projects/pkce"
@@ -18,6 +18,10 @@ Gem::Specification.new do |spec|
     "rubygems_mfa_required" => "true",
     "source_code_uri" => "https://github.com/bkuhlmann/pkce"
   }
+
+  spec.post_install_message = <<~MESSAGE
+    DEPRECATION: The PKCE gem is deprecated and will be fully destroyed on 2026-06-15.
+  MESSAGE
 
   spec.signing_key = Gem.default_key_path
   spec.cert_chain = [Gem.default_cert_path]
